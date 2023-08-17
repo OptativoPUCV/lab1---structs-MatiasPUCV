@@ -29,10 +29,9 @@ invierta el orden de sus elementos.
 */
 void reverseArray(int arr[], int size)
 {
-  int arrTemp[size];
 
   for (int i = 0; i < size; i++)
-    printf("%i, ", arrTemp[size - i]);
+    printf("%i, ", arr[size - i]);
 
 
 }

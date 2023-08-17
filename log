@@ -278,3 +278,9 @@ exercises.c:35:5: error: ‘*arrTemp[<unknown>]’ may be used uninitialized [-W
 cc1: all warnings being treated as errors
 Compilation failed
 7989c21
+Thu 17 Aug 2023 11:42:27 PM UTC: 
+ exercises.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ tests:  0|6
+total_score: 10/70
+5336d71
