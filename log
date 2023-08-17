@@ -267,3 +267,14 @@ Thu 17 Aug 2023 11:39:21 PM UTC:
  tests:  0|6
 total_score: 10/70
 ba0cf9f
+Thu 17 Aug 2023 11:41:50 PM UTC: 
+ exercises.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:35:5: error: ‘*arrTemp[<unknown>]’ may be used uninitialized [-Werror=maybe-uninitialized]
+   35 |     printf("%i, ", arrTemp[size - i]);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7989c21

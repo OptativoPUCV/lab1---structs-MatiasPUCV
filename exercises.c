@@ -32,10 +32,9 @@ void reverseArray(int arr[], int size)
   int arrTemp[size];
 
   for (int i = 0; i < size; i++)
-    arrTemp[size - i] = arr[i];
+    printf("%i, ", arrTemp[size - i]);
 
-  for (int i = 0; i < size; i++)
-    arr[i] = arrTemp[i];
+
 }
 
 /*
@@ -46,8 +45,6 @@ los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize)
 {
-
-
   return NULL;
 }
 
