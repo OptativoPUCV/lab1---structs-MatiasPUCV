@@ -223,3 +223,13 @@ test.c:(.text+0x638): undefined reference to `filterEvenNumbers'
 collect2: error: ld returned 1 exit status
 Compilation failed
 ae47891
+Thu 17 Aug 2023 09:06:37 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:47:72: error: expected ‘;’ before ‘}’ token
+   47 | int *filterEvenNumbers(int arr[], int size, int *newSize) { return NULL};
+      |                                                                        ^
+Compilation failed
+f8a752d
