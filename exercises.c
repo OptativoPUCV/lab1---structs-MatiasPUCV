@@ -45,7 +45,7 @@ y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize)
-{
+/*{
     int count = 0;
   
     for (int i = 0; i < size; i++)
@@ -66,7 +66,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
     }
 
   return result;
-}
+}*/
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
