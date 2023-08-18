@@ -114,7 +114,7 @@ int checkSorted(int arr[], int size)
     }
 
   if (flag1 == 1)
-    return 0;
+    return 1;
 
   if (flag2 == 1)
     return -1;
