@@ -9,12 +9,10 @@ Ejercicio 1: Encuentra el Elemento Mayor
 Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y devuelva el valor más grande del arreglo.
 */
-int findMax(int arr[], int size)
-{
+int findMax(int arr[], int size) {
   int temp = arr[0];
-  
-  for (int i = 0; i < size; i++)
-  {
+
+  for (int i = 0; i < size; i++) {
     if (temp < arr[i])
       temp = arr[i];
   }
@@ -27,8 +25,7 @@ Ejercicio 2: Invertir un Arreglo
 Descripción: Escribe una función que tome un arreglo y su tamaño, y luego
 invierta el orden de sus elementos.
 */
-void reverseArray(int arr[], int size)
-{
+void reverseArray(int arr[], int size) {
   int temp[size];
   for (int i = 0; i < size; i++)
     temp[i] = arr[size - i - 1];
@@ -43,22 +40,18 @@ Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
-int *filterEvenNumbers(int arr[], int size, int *newSize)
-{
+int *filterEvenNumbers(int arr[], int size, int *newSize) {
   int count = 0;
-  for (int i = 0; i < size; i++)
-  {
+  for (int i = 0; i < size; i++) {
     if (arr[i] % 2 == 0)
       count++;
   }
 
-  int* result = (int*)malloc(sizeof(int) * count);
+  int *result = (int *)malloc(sizeof(int) * count);
   int index = 0;
 
-  for (int i = 0; i < size; i++)
-  {
-    if (arr[i] % 2 == 0 || arr[i] == 0)
-    {
+  for (int i = 0; i < size; i++) {
+    if (arr[i] % 2 == 0 || arr[i] == 0) {
       result[index] = arr[i];
       index++;
     }
@@ -74,10 +67,7 @@ ordenados y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado.
 */
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
-                       int result[])
-{
-  
-}
+                       int result[]) {}
 
 /*
 Ejercicio 5: Comprobación de Ordenación
@@ -125,11 +115,11 @@ typedef struct nodo {
   struct nodo *siguiente; // puntero al siguiente nodo
 } Nodo;
 
-Nodo *crearListaEnlazada(int arr[], int size)
-{
-  for (int i = 0; i < size; i++)
-    {
-      Nodo* n = (Nodo*)malloc(sizeof(Nodo));
-      n->numero = arr[i - size - 1];
-    }
+Nodo *crearListaEnlazada(int arr[], int size) {
+  for (int i = 0; i < size; i++) {
+    Nodo *n = (Nodo *)malloc(sizeof(Nodo));
+    n->numero = arr[i - size - 1];
+  }
+
+  return NULL;
 }
