@@ -361,3 +361,19 @@ exercises.c:49:10: error: function returns address of local variable [-Werror=re
 cc1: all warnings being treated as errors
 Compilation failed
 43b6653
+Fri 18 Aug 2023 12:15:50 AM UTC: 
+ exercises.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:47:29: error: expected expression before ‘int’
+   47 |   int* result = malloc(size(int) * 3);
+      |                             ^~~
+exercises.c:47:24: error: called object ‘size’ is not a function or function pointer
+   47 |   int* result = malloc(size(int) * 3);
+      |                        ^~~~
+exercises.c:43:39: note: declared here
+   43 | int *filterEvenNumbers(int arr[], int size, int *newSize) {
+      |                                   ~~~~^~~~
+Compilation failed
+dbcfae3

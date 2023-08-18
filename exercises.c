@@ -44,7 +44,10 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
   
   *newSize = 4;
 
-  int result[5] = {0, 1, 2, 3, 4};
+  int* result = malloc(size(int) * 3);
+  result[0] = 1;
+  result[1] = 2;
+  result[2] = 3;
   
   return result;
 }
