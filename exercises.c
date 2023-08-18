@@ -57,7 +57,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
 
   for (int i = 0; i < size; i++)
   {
-    if (arr[i] % 2 == 0)
+    if (arr[i] % 2 == 0 || arr[i] == 0)
     {
       result[index] = arr[i];
       index++;
@@ -125,4 +125,11 @@ typedef struct nodo {
   struct nodo *siguiente; // puntero al siguiente nodo
 } Nodo;
 
-Nodo *crearListaEnlazada(int arr[], int size) { return NULL; }
+Nodo *crearListaEnlazada(int arr[], int size)
+{
+  for (int i = 0; i < size; i++)
+    {
+      Nodo* n = (Nodo*)malloc(sizeof(Nodo));
+      n->numero = arr[i - size - 1];
+    }
+}
