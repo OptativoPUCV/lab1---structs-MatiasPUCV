@@ -150,5 +150,5 @@ Nodo *crearListaEnlazada(int arr[], int size) {
       temp = n2;
     }
 
-  return NULL;
+  return n;
 }
