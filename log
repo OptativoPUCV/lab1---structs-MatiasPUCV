@@ -502,3 +502,19 @@ Fri 18 Aug 2023 01:33:00 AM UTC:
  tests:  0|1
 total_score: 60/70
 89015af
+Fri 18 Aug 2023 01:41:38 AM UTC: 
+ exercises.c | 22 +++++++++++++++++++++-
+ 1 file changed, 21 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:108:9: error: ‘flag1’ undeclared (first use in this function); did you mean ‘flag’?
+  108 |         flag1 = 0;
+      |         ^~~~~
+      |         flag
+exercises.c:108:9: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:103:7: error: unused variable ‘flag’ [-Werror=unused-variable]
+  103 |   int flag = 1;
+      |       ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+83c19bb
