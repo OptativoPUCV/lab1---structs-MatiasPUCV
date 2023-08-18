@@ -108,7 +108,7 @@ int checkSorted(int arr[], int size)
       if(arr[i] > arr[i + 1])
         flag1 = 0;
 
-      if(arr[i] > arr[i + 1])
+      if(arr[i] < arr[i + 1])
         flag2 = 0;
         
     }
