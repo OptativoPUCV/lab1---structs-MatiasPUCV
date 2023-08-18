@@ -49,10 +49,15 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
   
   *newSize = count;
 
-  int* result = malloc(sizeof(int) * 3);
-  result[0] = 1;
-  result[1] = 2;
-  result[2] = 3;
+  int* result = malloc(sizeof(int) * count);
+
+  int index = 0;
+  for (int i = 0; i < size; i++)
+    if(arr[i] % 2 == 0)
+    {
+      result[index] = arr[i];
+      index++;
+    }
   
   return result;
 }
