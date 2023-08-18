@@ -350,3 +350,14 @@ Fri 18 Aug 2023 12:13:26 AM UTC:
  tests:  0|5
 total_score: 20/70
 41c776e
+Fri 18 Aug 2023 12:14:44 AM UTC: 
+ exercises.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:49:10: error: function returns address of local variable [-Werror=return-local-addr]
+   49 |   return result;
+      |          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+43b6653

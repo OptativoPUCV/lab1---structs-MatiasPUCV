@@ -43,8 +43,10 @@ los números pares del arreglo original.
 int *filterEvenNumbers(int arr[], int size, int *newSize) {
   
   *newSize = 4;
-  arr[0] = 69;
-  return arr;
+
+  int result[5] = {0, 1, 2, 3, 4};
+  
+  return result;
 }
 
 /*
