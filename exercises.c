@@ -44,20 +44,19 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
 
   int count = 0;
   for (int i = 0; i < size; i++)
-    if(arr[i] % 2 == 0)
+    if (arr[i] % 2 == 0)
       count++;
-  
+
   *newSize = count;
-  int* result = malloc(sizeof(int) * count);
+  int *result = malloc(sizeof(int) * count);
 
   int index = 0;
   for (int i = 0; i < size; i++)
-    if(arr[i] % 2 == 0)
-    {
+    if (arr[i] % 2 == 0) {
       result[index] = arr[i];
       index++;
     }
-  
+
   return result;
 }
 
@@ -68,34 +67,26 @@ ordenados y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado.
 */
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
-                       int result[])
-{
+                       int result[]) {
   int size = size1 + size2;
-  for (int i = 0; i < size; i++)
-    {
-      if (i <= size1 - 1)
-      {
-        result[i] = arr1[i];
-      }
-      else
-      {
-        result[i] = arr2[i - size1];
-      }
+  for (int i = 0; i < size; i++) {
+    if (i <= size1 - 1) {
+      result[i] = arr1[i];
+    } else {
+      result[i] = arr2[i - size1];
     }
+  }
 
   int temp;
-  for(int i = 0; i < size; i++)
-    {
-      for (int j = 0; j < size - i - 1; j++)
-        {
-          if (result[j] > result[j + 1])
-          {
-            temp          = result[j];
-            result[j]     = result[j +1];
-            result[j + 1] = temp;
-          }
-        }
+  for (int i = 0; i < size; i++) {
+    for (int j = 0; j < size - i - 1; j++) {
+      if (result[j] > result[j + 1]) {
+        temp = result[j];
+        result[j] = result[j + 1];
+        result[j + 1] = temp;
+      }
     }
+  }
 }
 
 /*
@@ -145,15 +136,19 @@ typedef struct nodo {
 } Nodo;
 
 Nodo *crearListaEnlazada(int arr[], int size) {
-  
-  Nodo* ptr = NULL;
-  for (int i = 0; i < size; i++)
-  {
-    Nodo *n = (Nodo *)malloc(sizeof(Nodo));
-    n->numero = arr[i];
-    n->siguiente = ptr;
-    ptr = n;
-  }
+
+  Nodo *n = malloc(sizeof(Nodo));
+  n->numero = arr[0];
+
+  Nodo* temp = n;
+
+  for (int i = 1; i < size; i++)
+    {
+      Nodo* n2 = malloc(sizeof(Nodo));
+      n->numero = arr[i];
+      n->siguiente = temp;
+      temp = n2;
+    }
 
   return NULL;
 }
