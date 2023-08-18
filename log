@@ -383,3 +383,14 @@ Fri 18 Aug 2023 12:16:00 AM UTC:
  tests:  0|5
 total_score: 20/70
 44a8cba
+Fri 18 Aug 2023 12:17:40 AM UTC: 
+ exercises.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:46:27: error: expected ‘;’ before ‘)’ token
+   46 |   for (int i = 0; i < size)
+      |                           ^
+      |                           ;
+Compilation failed
+fb72a1a
